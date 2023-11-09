@@ -78,7 +78,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "ionitydatalake",
+						"referenceName": "Ionity",
 						"type": "DatasetReference"
 					}
 				],
@@ -127,7 +127,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "pgmdatalake",
+						"referenceName": "pgm",
 						"type": "DatasetReference"
 					}
 				],
