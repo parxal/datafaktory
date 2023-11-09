@@ -2,7 +2,7 @@
 	"name": "pgm",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "HttpServer3",
+			"referenceName": "HttpServer1",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
