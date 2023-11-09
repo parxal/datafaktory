@@ -11,11 +11,11 @@
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
 			"value": "https://datastorageaccountv2.dfs.core.windows.net/"
 		},
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "https://pgm.mobie.pt/integration/locations"
+		},
 		"HttpServer2_properties_typeProperties_url": {
 			"value": "https://ionity.eu/location.json"
-		},
-		"HttpServer3_properties_typeProperties_url": {
-			"value": "https://pgm.mobie.pt/integration/locations"
 		},
 		"containerUri": {
 			"value": ""

@@ -15,13 +15,13 @@
 			"type": "string",
 			"defaultValue": "https://datastorageaccountv2.dfs.core.windows.net/"
 		},
+		"HttpServer1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://pgm.mobie.pt/integration/locations"
+		},
 		"HttpServer2_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://ionity.eu/location.json"
-		},
-		"HttpServer3_properties_typeProperties_url": {
-			"type": "string",
-			"defaultValue": "https://pgm.mobie.pt/integration/locations"
 		},
 		"containerUri": {
 			"type": "string",
@@ -56,11 +56,11 @@
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
 					},
+					"HttpServer1_properties_typeProperties_url": {
+						"value": "[parameters('HttpServer1_properties_typeProperties_url')]"
+					},
 					"HttpServer2_properties_typeProperties_url": {
 						"value": "[parameters('HttpServer2_properties_typeProperties_url')]"
-					},
-					"HttpServer3_properties_typeProperties_url": {
-						"value": "[parameters('HttpServer3_properties_typeProperties_url')]"
 					}
 				}
 			},
