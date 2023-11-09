@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "dataFactory-02"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://datastorageaccountv2.dfs.core.windows.net/"
+		},
+		"HttpServer2_properties_typeProperties_url": {
+			"value": "https://ionity.eu/location.json"
+		},
+		"HttpServer3_properties_typeProperties_url": {
+			"value": "https://pgm.mobie.pt/integration/locations"
+		}
+	}
+}
