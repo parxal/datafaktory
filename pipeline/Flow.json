@@ -56,8 +56,9 @@
 					"source": {
 						"type": "JsonSource",
 						"storeSettings": {
-							"type": "HttpReadSettings",
-							"requestMethod": "GET"
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
 							"type": "JsonReadSettings"
@@ -77,7 +78,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "Ionity",
+						"referenceName": "ionitydatalake",
 						"type": "DatasetReference"
 					}
 				],
@@ -104,8 +105,9 @@
 					"source": {
 						"type": "JsonSource",
 						"storeSettings": {
-							"type": "HttpReadSettings",
-							"requestMethod": "GET"
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
 							"type": "JsonReadSettings"
@@ -125,7 +127,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "pgm",
+						"referenceName": "pgmdatalake",
 						"type": "DatasetReference"
 					}
 				],
