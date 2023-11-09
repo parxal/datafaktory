@@ -1,0 +1,71 @@
+{
+	"name": "Ionity",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HttpServer2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"changed": {
+					"type": "boolean"
+				},
+				"timestamp": {
+					"type": "integer"
+				},
+				"clive": {
+					"type": "integer"
+				},
+				"cbuilding": {
+					"type": "integer"
+				},
+				"locations": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"name": {
+								"type": "string"
+							},
+							"title": {
+								"type": "string"
+							},
+							"description": {
+								"type": "string"
+							},
+							"adress": {
+								"type": "string"
+							},
+							"plz": {
+								"type": "string"
+							},
+							"city": {
+								"type": "string"
+							},
+							"lat": {
+								"type": "string"
+							},
+							"lng": {
+								"type": "string"
+							},
+							"status": {
+								"type": "string"
+							},
+							"charger": {
+								"type": "string"
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

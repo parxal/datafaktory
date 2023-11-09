@@ -1,0 +1,9 @@
+{
+	"name": "adatafaktory",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ce34e8c8-fbf6-462b-9568-828331bb6bf6",
+		"tenantId": "13670c1e-f344-4c58-81f8-0b269b41571a"
+	}
+}

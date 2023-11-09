@@ -1,0 +1,110 @@
+{
+	"name": "pgm",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HttpServer3",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"data": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"party_id": {
+								"type": "string"
+							},
+							"id": {
+								"type": "string"
+							},
+							"address": {
+								"type": "string"
+							},
+							"city": {
+								"type": "string"
+							},
+							"coordinates": {
+								"type": "object",
+								"properties": {
+									"latitude": {
+										"type": "string"
+									},
+									"longitude": {
+										"type": "string"
+									}
+								}
+							},
+							"evses": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"evse_id": {
+											"type": "string"
+										},
+										"status": {
+											"type": "string"
+										},
+										"last_updated": {
+											"type": "string"
+										},
+										"connectors": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"format": {
+														"type": "string"
+													},
+													"standard": {
+														"type": "string"
+													},
+													"max_voltage": {
+														"type": "integer"
+													},
+													"last_updated": {
+														"type": "string"
+													},
+													"max_amperage": {
+														"type": "integer"
+													},
+													"max_electric_power": {
+														"type": "integer"
+													}
+												}
+											}
+										}
+									}
+								}
+							},
+							"last_updated": {
+								"type": "string"
+							},
+							"mobie_voltage_level": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"status_code": {
+					"type": "integer"
+				},
+				"status_message": {
+					"type": "string"
+				},
+				"timestamp": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
