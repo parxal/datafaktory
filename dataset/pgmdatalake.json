@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileSystem": "pgm"
+				"folderPath": "Pgm",
+				"fileSystem": "datalake"
 			}
 		},
 		"schema": {}

@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileSystem": "finalcsv"
+				"folderPath": "Final",
+				"fileSystem": "datalake"
 			},
 			"columnDelimiter": ",",
 			"rowDelimiter": "\n",

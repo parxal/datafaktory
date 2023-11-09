@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileSystem": "ionity"
+				"folderPath": "Ionity",
+				"fileSystem": "datalake"
 			}
 		},
 		"schema": {}
