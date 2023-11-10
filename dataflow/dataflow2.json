@@ -1,0 +1,75 @@
+{
+	"name": "dataflow2",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "finalCSV",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "MachineLearningContainer",
+						"type": "DatasetReference"
+					},
+					"name": "sink2"
+				}
+			],
+			"transformations": [
+				{
+					"name": "DistinctRows"
+				},
+				{
+					"name": "select1"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          status as string,",
+				"          lat as string,",
+				"          lng as string,",
+				"          title as string,",
+				"          date as string,",
+				"          weekday as string,",
+				"          hour as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 aggregate(groupBy(mycols = sha2(256,columns())),",
+				"     each(match(true()), $$ = first($$))) ~> DistinctRows",
+				"DistinctRows select(mapColumn(",
+				"          status,",
+				"          lat,",
+				"          lng,",
+				"          title,",
+				"          date,",
+				"          weekday,",
+				"          hour",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1",
+				"select1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          status as string,",
+				"          lat as string,",
+				"          lng as string,",
+				"          title as string,",
+				"          date as string,",
+				"          weekday as string,",
+				"          hour as string",
+				"     ),",
+				"     truncate: true,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink2"
+			]
+		}
+	}
+}
